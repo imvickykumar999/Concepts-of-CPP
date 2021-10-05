@@ -1,7 +1,12 @@
 //C:\Users\Vicky\Desktop\Repository\Concepts-of-CPP
+//pg. no: 159
 
 #include <iostream>
-#include <string>
+#include <cstring>
+
+#include <conio.h>
+//https://stackoverflow.com/questions/41407242/declaring-the-getch-function
+
 using namespace std;
 
 class employee
@@ -18,19 +23,22 @@ class employee
 		{
 			cout<<endl<<"reached zero-argument contructor";
 			strcpy(name, " ");
+//			https://stackoverflow.com/questions/2220795/error-strcpy-was-not-declared-in-this-scope
+
 			age=0;
 			sal=0.0;
 		}
 		
-		employee(char *n, int a, float s)
+		employee(char const *n, int a, float s)
 		{
-			cout<<endl<<"reached three-argument constructor";
+			cout<<endl<<"reached three-argument constructor"<<endl;
 			strcpy(name, n);
 			age=a;
 			sal=s;
 		}
 		
-		void setdata(char *n, int a, float s)
+//		https://stackoverflow.com/questions/59670/how-to-get-rid-of-deprecated-conversion-from-string-constant-to-char-warnin?rq=1
+		void setdata(char const *n, int a, float s)
 		{
 			strcpy(name, n);
 			age=a;
@@ -44,7 +52,7 @@ class employee
 		
 		~employee()
 		{
-			cout<<endl<<"reached destructor"<<endl;
+			cout<<endl<<"reached destructor";
 		}
 };
 
@@ -59,8 +67,10 @@ int main()
 	
 	p->showdata();
 	q->showdata();
-	
+	cout<<endl;
+
 	delete p;
 	delete q;
+	getch();
 	return 0; 
 }
