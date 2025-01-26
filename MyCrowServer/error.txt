@@ -1,0 +1,516 @@
+C:\Users\surface\Documents\GitHub\Concepts-of-CPP\MyCrowServer>g++ -std=c++17 server.cpp -o server -lpthread -I "C:\Boost\boost_1_87_0" -DBOOST_ERROR_CODE_HEADER_ONLY
+In file included from server.cpp:1:0:
+crow_all.h: In static member function 'static std::__cxx11::string crow::CerrLogHandler::timestamp()':
+crow_all.h:364:32: error: 'gmtime_s' was not declared in this scope
+             gmtime_s(&my_tm, &t);
+                                ^
+In file included from C:\Boost\boost_1_87_0/boost/system/detail/error_category_impl.hpp:79:0,
+                 from C:\Boost\boost_1_87_0/boost/system/error_category.hpp:11,
+                 from C:\Boost\boost_1_87_0/boost/system/error_code.hpp:14,
+                 from C:\Boost\boost_1_87_0/boost/asio/detail/throw_error.hpp:20,
+                 from C:\Boost\boost_1_87_0/boost/asio/detail/impl/win_tss_ptr.ipp:22,
+                 from C:\Boost\boost_1_87_0/boost/asio/detail/win_tss_ptr.hpp:76,
+                 from C:\Boost\boost_1_87_0/boost/asio/detail/tss_ptr.hpp:25,
+                 from C:\Boost\boost_1_87_0/boost/asio/detail/call_stack.hpp:20,
+                 from C:\Boost\boost_1_87_0/boost/asio/detail/thread_context.hpp:20,
+                 from C:\Boost\boost_1_87_0/boost/asio/detail/recycling_allocator.hpp:20,
+                 from C:\Boost\boost_1_87_0/boost/asio/detail/handler_alloc_helpers.hpp:20,
+                 from C:\Boost\boost_1_87_0/boost/asio/detail/executor_function.hpp:19,
+                 from C:\Boost\boost_1_87_0/boost/asio/execution/any_executor.hpp:24,
+                 from C:\Boost\boost_1_87_0/boost/asio/execution.hpp:19,
+                 from C:\Boost\boost_1_87_0/boost/asio/any_completion_executor.hpp:22,
+                 from C:\Boost\boost_1_87_0/boost/asio.hpp:20,
+                 from crow_all.h:1153,
+                 from server.cpp:1:
+C:\Boost\boost_1_87_0/boost/system/detail/mutex.hpp: At global scope:
+C:\Boost\boost_1_87_0/boost/system/detail/mutex.hpp:84:12: error: 'std::mutex' has not been declared
+ using std::mutex;
+            ^~~~~
+In file included from C:\Boost\boost_1_87_0/boost/system/error_category.hpp:11:0,
+                 from C:\Boost\boost_1_87_0/boost/system/error_code.hpp:14,
+                 from C:\Boost\boost_1_87_0/boost/asio/detail/throw_error.hpp:20,
+                 from C:\Boost\boost_1_87_0/boost/asio/detail/impl/win_tss_ptr.ipp:22,
+                 from C:\Boost\boost_1_87_0/boost/asio/detail/win_tss_ptr.hpp:76,
+                 from C:\Boost\boost_1_87_0/boost/asio/detail/tss_ptr.hpp:25,
+                 from C:\Boost\boost_1_87_0/boost/asio/detail/call_stack.hpp:20,
+                 from C:\Boost\boost_1_87_0/boost/asio/detail/thread_context.hpp:20,
+                 from C:\Boost\boost_1_87_0/boost/asio/detail/recycling_allocator.hpp:20,
+                 from C:\Boost\boost_1_87_0/boost/asio/detail/handler_alloc_helpers.hpp:20,
+                 from C:\Boost\boost_1_87_0/boost/asio/detail/executor_function.hpp:19,
+                 from C:\Boost\boost_1_87_0/boost/asio/execution/any_executor.hpp:24,
+                 from C:\Boost\boost_1_87_0/boost/asio/execution.hpp:19,
+                 from C:\Boost\boost_1_87_0/boost/asio/any_completion_executor.hpp:22,
+                 from C:\Boost\boost_1_87_0/boost/asio.hpp:20,
+                 from crow_all.h:1153,
+                 from server.cpp:1:
+C:\Boost\boost_1_87_0/boost/system/detail/error_category_impl.hpp: In member function 'void boost::system::error_category::init_stdcat() const':
+C:\Boost\boost_1_87_0/boost/system/detail/error_category_impl.hpp:103:28: error: 'mutex' in namespace 'boost::system::detail' does not name a type
+     static system::detail::mutex mx_;
+                            ^~~~~
+C:\Boost\boost_1_87_0/boost/system/detail/error_category_impl.hpp:105:32: error: 'mutex' is not a member of 'boost::system::detail'
+     system::detail::lock_guard<system::detail::mutex> lk( mx_ );
+                                ^~~~~~
+C:\Boost\boost_1_87_0/boost/system/detail/error_category_impl.hpp:105:53: error: template argument 1 is invalid
+     system::detail::lock_guard<system::detail::mutex> lk( mx_ );
+
+     ^
+C:\Boost\boost_1_87_0/boost/system/detail/error_category_impl.hpp:105:59: error: 'mx_' was not declared in this scope
+     system::detail::lock_guard<system::detail::mutex> lk( mx_ );
+
+           ^~~
+In file included from server.cpp:1:0:
+crow_all.h: At global scope:
+crow_all.h:1179:47: error: expected ')' before '&' token
+             task_timer(boost::asio::io_service& io_service):
+                                               ^
+crow_all.h:1274:26: error: 'io_service' in namespace 'boost::asio' does not name a type
+             boost::asio::io_service& io_service_;
+                          ^~~~~~~~~~
+crow_all.h:1308:46: error: expected ')' before '&' token
+         SocketAdaptor(boost::asio::io_service& io_service, context*):
+                                              ^
+crow_all.h:1312:22: error: 'io_service' in namespace 'boost::asio' does not name a type
+         boost::asio::io_service& get_io_service()
+                      ^~~~~~~~~~
+In file included from server.cpp:1:0:
+crow_all.h:2584:22: error: 'io_service' in namespace 'boost::asio' does not name a type
+         boost::asio::io_service* io_service{};
+                      ^~~~~~~~~~
+In file included from server.cpp:1:0:
+crow_all.h: In member function 'void crow::request::post(CompletionHandler)':
+crow_all.h:2615:13: error: 'io_service' was not declared in this scope
+             io_service->post(handler);
+             ^~~~~~~~~~
+crow_all.h: In member function 'void crow::request::dispatch(CompletionHandler)':
+crow_all.h:2622:13: error: 'io_service' was not declared in this scope
+             io_service->dispatch(handler);
+             ^~~~~~~~~~
+In file included from server.cpp:1:0:
+crow_all.h: At global scope:
+crow_all.h:11235:34: error: expected ')' before '&' token
+           boost::asio::io_service& io_service,
+                                  ^
+crow_all.h: In member function 'void crow::Connection<Adaptor, Handler, Middlewares>::handle()':
+crow_all.h:11356:21: error: 'struct crow::request' has no member named 'io_service'
+                 req.io_service = &adaptor_.get_io_service();
+                     ^~~~~~~~~~
+In file included from server.cpp:1:0:
+crow_all.h: At global scope:
+crow_all.h:12050:15: error: 'io_service' in namespace 'boost::asio' does not name a type
+         asio::io_service io_service_;
+               ^~~~~~~~~~
+crow_all.h:12051:37: error: 'io_service' is not a member of 'boost::asio'
+         std::vector<std::unique_ptr<asio::io_service>> io_service_pool_;
+                                     ^~~~
+crow_all.h:12051:43: error: template argument 1 is invalid
+         std::vector<std::unique_ptr<asio::io_service>> io_service_pool_;
+                                           ^~~~~~~~~~
+crow_all.h:12051:43: error: template argument 2 is invalid
+crow_all.h:12051:53: error: template argument 1 is invalid
+         std::vector<std::unique_ptr<asio::io_service>> io_service_pool_;
+
+     ^~
+crow_all.h:12051:53: error: template argument 2 is invalid
+crow_all.h: In constructor 'crow::Server<Handler, Adaptor, Middlewares>::Server(Handler*, std::__cxx11::string, uint16_t, std::__cxx11::string, std::tuple<_Tail ...>*, uint16_t, uint8_t, typename Adaptor::context*)':
+crow_all.h:11854:21: error: 'io_service_' was not declared in this scope
+           acceptor_(io_service_, tcp::endpoint(boost::asio::ip::address::from_string(bindaddr), port)),
+                     ^~~~~~~~~~~
+crow_all.h:11854:48: error: 'from_string' is not a member of 'boost::asio::ip::address'
+           acceptor_(io_service_, tcp::endpoint(boost::asio::ip::address::from_string(bindaddr), port)),
+
+^~~~~
+crow_all.h: In member function 'void crow::Server<Handler, Adaptor, Middlewares>::run()':
+crow_all.h:11889:34: error: request for member 'emplace_back' in '((crow::Server<Handler, Adaptor, Middlewares>*)this)->crow::Server<Handler, Adaptor, Middlewares>::io_service_pool_', which is of non-class type 'int'
+                 io_service_pool_.emplace_back(new boost::asio::io_service());
+                                  ^~~~~~~~~~~~
+crow_all.h:11889:51: error: expected type-specifier
+                 io_service_pool_.emplace_back(new boost::asio::io_service());
+
+   ^~~~~
+crow_all.h: In lambda function:
+crow_all.h:11908:58: error: there are no arguments to 'gmtime_s' that depend on a template parameter, so a declaration of 'gmtime_s' must be available [-fpermissive]
+                             gmtime_s(&my_tm, &last_time_t);
+
+          ^
+crow_all.h:11908:58: note: (if you use '-fpermissive', G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+crow_all.h: In lambda function:
+crow_all.h:11927:74: error: invalid types 'int[const uint16_t {aka const short unsigned int}]' for array subscript
+                         detail::task_timer task_timer(*io_service_pool_[i]);
+
+                          ^
+crow_all.h:11937:55: error: invalid types 'int[const uint16_t {aka const short unsigned int}]' for array subscript
+                                 if (io_service_pool_[i]->run() == 0)
+
+       ^
+crow_all.h: In member function 'void crow::Server<Handler, Adaptor, Middlewares>::run()':
+crow_all.h:11974:22: error: 'std::this_thread' has not been declared
+                 std::this_thread::yield();
+                      ^~~~~~~~~~~
+crow_all.h:11978:13: error: 'thread' is not a member of 'std'
+             std::thread(
+             ^~~
+crow_all.h:11978:13: note: suggested alternative:
+In file included from C:\Boost\boost_1_87_0/boost/asio/detail/scheduler.hpp:28:0,
+                 from C:\Boost\boost_1_87_0/boost/asio/system_context.hpp:19,
+                 from C:\Boost\boost_1_87_0/boost/asio/impl/system_executor.hpp:21,
+                 from C:\Boost\boost_1_87_0/boost/asio/system_executor.hpp:671,
+                 from C:\Boost\boost_1_87_0/boost/asio/associated_executor.hpp:24,
+                 from C:\Boost\boost_1_87_0/boost/asio/any_completion_handler.hpp:23,
+                 from C:\Boost\boost_1_87_0/boost/asio.hpp:21,
+                 from crow_all.h:1153,
+                 from server.cpp:1:
+C:\Boost\boost_1_87_0/boost/asio/detail/thread.hpp:50:20: note:   'boost::asio::detail::thread'
+ typedef win_thread thread;
+                    ^~~~~~
+In file included from server.cpp:1:0:
+crow_all.h: In lambda function:
+crow_all.h:11980:19: error: 'io_service_' was not declared in this scope
+                   io_service_.run();
+                   ^~~~~~~~~~~
+crow_all.h: In member function 'void crow::Server<Handler, Adaptor, Middlewares>::stop()':
+crow_all.h:11988:13: error: 'io_service_' was not declared in this scope
+             io_service_.stop();
+             ^~~~~~~~~~~
+crow_all.h:11989:37: error: there are no arguments to 'begin' that depend on a template parameter, so a declaration of 'begin' must be available [-fpermissive]
+             for (auto& io_service : io_service_pool_)
+                                     ^~~~~~~~~~~~~~~~
+crow_all.h:11989:37: error: there are no arguments to 'end' that depend on a template parameter, so a declaration of 'end' must be available [-fpermissive]
+crow_all.h: In member function 'void crow::Server<Handler, Adaptor, Middlewares>::do_accept()':
+crow_all.h:12021:13: error: 'io_service' is not a member of 'boost::asio'
+             asio::io_service& is = *io_service_pool_[service_idx];
+             ^~~~
+crow_all.h:12021:31: error: 'is' was not declared in this scope
+             asio::io_service& is = *io_service_pool_[service_idx];
+                               ^~
+crow_all.h:12021:65: error: invalid types 'int[uint16_t {aka short unsigned int}]' for array subscript
+             asio::io_service& is = *io_service_pool_[service_idx];
+
+                 ^
+crow_all.h: In lambda function:
+crow_all.h:12034:23: error: 'is' is not captured
+                       is.post(
+                       ^~
+crow_all.h:12031:41: note: the lambda has no capture-default
+               [this, p, &is, service_idx](boost::system::error_code ec) {
+                                         ^
+crow_all.h:12021:31: note: '<typeprefixerror>is' declared here
+             asio::io_service& is = *io_service_pool_[service_idx];
+                               ^~
+crow_all.h:12042:42: error: 'is' is not captured
+                       CROW_LOG_DEBUG << &is << " {" << service_idx << "} queue length: " << task_queue_length_pool_[service_idx];
+                                          ^~
+crow_all.h:12031:41: note: the lambda has no capture-default
+               [this, p, &is, service_idx](boost::system::error_code ec) {
+                                         ^
+crow_all.h:12021:31: note: '<typeprefixerror>is' declared here
+             asio::io_service& is = *io_service_pool_[service_idx];
+                               ^~
+crow_all.h: At global scope:
+crow_all.h:12577:14: error: 'condition_variable' in namespace 'std' does not name a type
+         std::condition_variable cv_started_;
+              ^~~~~~~~~~~~~~~~~~
+crow_all.h:12578:14: error: 'mutex' in namespace 'std' does not name a type
+         std::mutex start_mutex_;
+              ^~~~~
+crow_all.h: In member function 'crow::Crow<Middlewares>::self_t& crow::Crow<Middlewares>::multithreaded()':
+crow_all.h:12241:37: error: 'std::thread' has not been declared
+             return concurrency(std::thread::hardware_concurrency());
+                                     ^~~~~~
+crow_all.h: In member function 'void crow::Crow<Middlewares>::notify_server_start()':
+crow_all.h:12359:30: error: 'mutex' is not a member of 'std'
+             std::unique_lock<std::mutex> lock(start_mutex_);
+                              ^~~
+crow_all.h:12359:30: note: suggested alternative:
+In file included from C:\Boost\boost_1_87_0/boost/asio/execution/blocking_adaptation.hpp:20:0,
+                 from C:\Boost\boost_1_87_0/boost/asio/execution.hpp:22,
+                 from C:\Boost\boost_1_87_0/boost/asio/any_completion_executor.hpp:22,
+                 from C:\Boost\boost_1_87_0/boost/asio.hpp:20,
+                 from crow_all.h:1153,
+                 from server.cpp:1:
+C:\Boost\boost_1_87_0/boost/asio/detail/mutex.hpp:37:19: note:   'boost::asio::detail::mutex'
+ typedef win_mutex mutex;
+                   ^~~~~
+In file included from server.cpp:1:0:
+crow_all.h:12359:40: error: template argument 1 is invalid
+             std::unique_lock<std::mutex> lock(start_mutex_);
+                                        ^
+crow_all.h:12359:47: error: 'start_mutex_' was not declared in this scope
+             std::unique_lock<std::mutex> lock(start_mutex_);
+                                               ^~~~~~~~~~~~
+crow_all.h:12361:13: error: 'cv_started_' was not declared in this scope
+             cv_started_.notify_all();
+             ^~~~~~~~~~~
+crow_all.h: In member function 'std::future<void> crow::Crow<Middlewares>::run_async()':
+crow_all.h:12400:9: error: return type 'class std::future<void>' is incomplete
+         {
+         ^
+crow_all.h: In member function 'void crow::Crow<Middlewares>::wait_for_server_start()':
+crow_all.h:12540:30: error: 'mutex' is not a member of 'std'
+             std::unique_lock<std::mutex> lock(start_mutex_);
+                              ^~~
+crow_all.h:12540:30: note: suggested alternative:
+In file included from C:\Boost\boost_1_87_0/boost/asio/execution/blocking_adaptation.hpp:20:0,
+                 from C:\Boost\boost_1_87_0/boost/asio/execution.hpp:22,
+                 from C:\Boost\boost_1_87_0/boost/asio/any_completion_executor.hpp:22,
+                 from C:\Boost\boost_1_87_0/boost/asio.hpp:20,
+                 from crow_all.h:1153,
+                 from server.cpp:1:
+C:\Boost\boost_1_87_0/boost/asio/detail/mutex.hpp:37:19: note:   'boost::asio::detail::mutex'
+ typedef win_mutex mutex;
+                   ^~~~~
+In file included from server.cpp:1:0:
+crow_all.h:12540:40: error: template argument 1 is invalid
+             std::unique_lock<std::mutex> lock(start_mutex_);
+                                        ^
+crow_all.h:12540:47: error: 'start_mutex_' was not declared in this scope
+             std::unique_lock<std::mutex> lock(start_mutex_);
+                                               ^~~~~~~~~~~~
+crow_all.h:12543:13: error: 'cv_started_' was not declared in this scope
+             cv_started_.wait(lock);
+             ^~~~~~~~~~~
+crow_all.h: In instantiation of 'crow::Server<Handler, Adaptor, Middlewares>::run()::<lambda()>::<lambda()> [with Handler = crow::Crow<>; Adaptor = crow::SocketAdaptor; Middlewares = {}]':
+crow_all.h:11912:29:   required from 'struct crow::Server<Handler, Adaptor, Middlewares>::run()::<lambda()> [with Handler = crow::Crow<>; Adaptor = crow::SocketAdaptor; Middlewares = {}]::<lambda()>'
+crow_all.h:11915:25:   required from 'crow::Server<Handler, Adaptor, Middlewares>::run()::<lambda()> [with Handler = crow::Crow<>; Adaptor = crow::SocketAdaptor; Middlewares = {}]'
+crow_all.h:11898:52:   required from 'struct crow::Server<Handler, Adaptor, Middlewares>::run() [with Handler = crow::Crow<>; Adaptor = crow::SocketAdaptor; Middlewares = {}]::<lambda()>'
+crow_all.h:11897:29:   required from 'void crow::Server<Handler, Adaptor, Middlewares>::run() [with Handler = crow::Crow<>; Adaptor = crow::SocketAdaptor; Middlewares = {}]'
+crow_all.h:12394:17:   required from 'void crow::Crow<Middlewares>::run() [with Middlewares = {}]'
+server.cpp:17:40:   required from here
+crow_all.h:11908:37: error: 'gmtime_s' was not declared in this scope
+                             gmtime_s(&my_tm, &last_time_t);
+                             ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+crow_all.h: In instantiation of 'void crow::Server<Handler, Adaptor, Middlewares>::run() [with Handler = crow::Crow<>; Adaptor = crow::SocketAdaptor; Middlewares = {}]':
+crow_all.h:12394:17:   required from 'void crow::Crow<Middlewares>::run() [with Middlewares = {}]'
+server.cpp:17:40:   required from here
+crow_all.h:11897:29: error: invalid use of incomplete type 'class std::future<void>'
+                   std::async(
+                   ~~~~~~~~~~^
+                     std::launch::async, [this, i, &init_count] {
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         // thread local date string get function
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         auto last = std::chrono::steady_clock::now();
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+                         std::string date_str;
+                         ~~~~~~~~~~~~~~~~~~~~~
+                         auto update_date_str = [&] {
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                             auto last_time_t = time(0);
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                             tm my_tm;
+                             ~~~~~~~~~
+
+
+ #if defined(_MSC_VER) || defined(__MINGW32__)
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                             gmtime_s(&my_tm, &last_time_t);
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ #else
+ ~~~~~
+                             gmtime_r(&last_time_t, &my_tm);
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ #endif
+ ~~~~~~
+                             date_str.resize(100);
+                             ~~~~~~~~~~~~~~~~~~~~~
+                             size_t date_str_sz = strftime(&date_str[0], 99, "%a, %d %b %Y %H:%M:%S GMT", &my_tm);
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                             date_str.resize(date_str_sz);
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         };
+                         ~~
+                         update_date_str();
+                         ~~~~~~~~~~~~~~~~~~
+                         get_cached_date_str_pool_[i] = [&]() -> std::string {
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                             if (std::chrono::steady_clock::now() - last >= std::chrono::seconds(1))
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                             {
+                             ~
+                                 last = std::chrono::steady_clock::now();
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                 update_date_str();
+                                 ~~~~~~~~~~~~~~~~~~
+                             }
+                             ~
+                             return date_str;
+                             ~~~~~~~~~~~~~~~~
+                         };
+                         ~~
+
+
+                         // initializing task timers
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         detail::task_timer task_timer(*io_service_pool_[i]);
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         task_timer.set_default_timeout(timeout_);
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         task_timer_pool_[i] = &task_timer;
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                         task_queue_length_pool_[i] = 0;
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+                         init_count++;
+                         ~~~~~~~~~~~~~
+                         while (1)
+                         ~~~~~~~~~
+                         {
+                         ~
+                             try
+                             ~~~
+                             {
+                             ~
+                                 if (io_service_pool_[i]->run() == 0)
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                 {
+                                 ~
+                                     // when io_service.run returns 0, there are no more works to do.
+                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                     break;
+                                     ~~~~~~
+                                 }
+                                 ~
+                             }
+                             ~
+                             catch (std::exception& e)
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~
+                             {
+                             ~
+                                 CROW_LOG_ERROR << "Worker Crash: An uncaught exception occurred: " << e.what();
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                             }
+                             ~
+                         }
+                         ~
+                     }));
+                     ~~
+In file included from C:\Boost\boost_1_87_0/boost/asio/detail/future.hpp:19:0,
+                 from C:\Boost\boost_1_87_0/boost/asio/packaged_task.hpp:19,
+                 from C:\Boost\boost_1_87_0/boost/asio.hpp:149,
+                 from crow_all.h:1153,
+                 from server.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\future:115:11: note: declaration of 'class std::future<void>'
+     class future;
+           ^~~~~~
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\vector:64:0,
+                 from crow_all.h:666,
+                 from server.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_vector.h: In instantiation of 'std::_Vector_base<_Tp, _Alloc>::~_Vector_base() [with _Tp = std::future<void>; _Alloc = std::allocator<std::future<void> >]':
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_vector.h:259:15:   required from 'std::vector<_Tp, _Alloc>::vector() [with _Tp = std::future<void>; _Alloc = std::allocator<std::future<void> >]'
+crow_all.h:11893:44:   required from 'void crow::Server<Handler, Adaptor, Middlewares>::run() [with Handler = crow::Crow<>; Adaptor = crow::SocketAdaptor; Middlewares = {}]'
+crow_all.h:12394:17:   required from 'void crow::Crow<Middlewares>::run() [with Middlewares = {}]'
+server.cpp:17:40:   required from here
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_vector.h:161:9: error: invalid use of incomplete type 'class std::future<void>'
+       { _M_deallocate(this->_M_impl._M_start, this->_M_impl._M_end_of_storage
+                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+         - this->_M_impl._M_start); }
+         ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from C:\Boost\boost_1_87_0/boost/asio/detail/future.hpp:19:0,
+                 from C:\Boost\boost_1_87_0/boost/asio/packaged_task.hpp:19,
+                 from C:\Boost\boost_1_87_0/boost/asio.hpp:149,
+                 from crow_all.h:1153,
+                 from server.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\future:115:11: note: declaration of 'class std::future<void>'
+     class future;
+           ^~~~~~
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_tempbuf.h:60:0,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_algo.h:62,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\algorithm:62,
+                 from C:\Boost\boost_1_87_0/boost/iterator/iterator_concepts.hpp:26,
+                 from C:\Boost\boost_1_87_0/boost/range/concepts.hpp:20,
+                 from C:\Boost\boost_1_87_0/boost/range/size_type.hpp:20,
+                 from C:\Boost\boost_1_87_0/boost/range/size.hpp:21,
+                 from C:\Boost\boost_1_87_0/boost/range/functions.hpp:20,
+                 from C:\Boost\boost_1_87_0/boost/range/iterator_range_core.hpp:38,
+                 from C:\Boost\boost_1_87_0/boost/range/iterator_range.hpp:13,
+                 from C:\Boost\boost_1_87_0/boost/range/as_literal.hpp:18,
+                 from C:\Boost\boost_1_87_0/boost/algorithm/string/predicate.hpp:20,
+                 from crow_all.h:227,
+                 from server.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_construct.h: In instantiation of 'void std::_Destroy(_ForwardIterator, _ForwardIterator) [with _ForwardIterator = std::future<void>*]':
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_construct.h:151:15:   required from 'void std::_Destroy(_ForwardIterator, _ForwardIterator, std::allocator<_T2>&) [with _ForwardIterator = std::future<void>*; _Tp = std::future<void>]'
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_vector.h:426:22:   required from 'std::vector<_Tp, _Alloc>::~vector() [with _Tp = std::future<void>; _Alloc = std::allocator<std::future<void> >]'
+crow_all.h:11893:44:   required from 'void crow::Server<Handler, Adaptor, Middlewares>::run() [with Handler = crow::Crow<>; Adaptor = crow::SocketAdaptor; Middlewares = {}]'
+crow_all.h:12394:17:   required from 'void crow::Crow<Middlewares>::run() [with Middlewares = {}]'
+server.cpp:17:40:   required from here
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\stl_construct.h:127:11: error: invalid use of incomplete type 'std::iterator_traits<std::future<void>*>::value_type {aka class std::future<void>}'
+       std::_Destroy_aux<__has_trivial_destructor(_Value_type)>::
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  __destroy(__first, __last);
+  ~~~~~~~~~^~~~~~~~~~~~~~~~~
+In file included from C:\Boost\boost_1_87_0/boost/asio/detail/future.hpp:19:0,
+                 from C:\Boost\boost_1_87_0/boost/asio/packaged_task.hpp:19,
+                 from C:\Boost\boost_1_87_0/boost/asio.hpp:149,
+                 from crow_all.h:1153,
+                 from server.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\future:115:11: note: declaration of 'std::iterator_traits<std::future<void>*>::value_type {aka class std::future<void>}'
+     class future;
+           ^~~~~~
+In file included from server.cpp:1:0:
+crow_all.h: In instantiation of 'void crow::websocket::Connection<Adaptor>::dispatch(CompletionHandler) [with CompletionHandler = crow::websocket::Connection<Adaptor>::close(const string&) [with Adaptor = crow::SocketAdaptor; std::__cxx11::string = std::__cxx11::basic_string<char>]::<lambda()>; Adaptor = crow::SocketAdaptor]':
+crow_all.h:3876:17:   required from 'void crow::websocket::Connection<Adaptor>::close(const string&) [with Adaptor = crow::SocketAdaptor; std::__cxx11::string = std::__cxx11::basic_string<char>]'
+crow_all.h:4231:34:   required from 'void crow::websocket::Connection<Adaptor>::handle_fragment() [with Adaptor = crow::SocketAdaptor]'
+crow_all.h:4144:54:   required from 'crow::websocket::Connection<Adaptor>::do_read()::<lambda(const boost::system::error_code&, std::size_t)> [with Adaptor = crow::SocketAdaptor; std::size_t = unsigned int]'
+crow_all.h:4135:28:   required from 'struct crow::websocket::Connection<Adaptor>::do_read() [with Adaptor = crow::SocketAdaptor]::<lambda(const class boost::system::error_code&, std::size_t)>'
+crow_all.h:4133:25:   required from 'void crow::websocket::Connection<Adaptor>::do_read() [with Adaptor = crow::SocketAdaptor]'
+crow_all.h:3938:24:   required from 'void crow::websocket::Connection<Adaptor>::start(std::__cxx11::string&&) [with Adaptor = crow::SocketAdaptor; std::__cxx11::string = std::__cxx11::basic_string<char>]'
+crow_all.h:3803:22:   required from 'crow::websocket::Connection<Adaptor>::Connection(const crow::request&, Adaptor&&, std::function<void(crow::websocket::connection&)>, std::function<void(crow::websocket::connection&, const std::__cxx11::basic_string<char>&, bool)>, std::function<void(crow::websocket::connection&, const std::__cxx11::basic_string<char>&)>, std::function<void(crow::websocket::connection&)>, std::function<bool(const crow::request&)>) [with Adaptor = crow::SocketAdaptor]'
+crow_all.h:9661:165:   required from here
+crow_all.h:3810:26: error: 'struct crow::SocketAdaptor' has no member named 'get_io_service'
+                 adaptor_.get_io_service().dispatch(handler);
+                 ~~~~~~~~~^~~~~~~~~~~~~~
+crow_all.h: In instantiation of 'void crow::websocket::Connection<Adaptor>::dispatch(CompletionHandler) [with CompletionHandler = crow::websocket::Connection<Adaptor>::send_pong(const string&) [with Adaptor = crow::SocketAdaptor; std::__cxx11::string = std::__cxx11::basic_string<char>]::<lambda()>; Adaptor = crow::SocketAdaptor]':
+crow_all.h:3840:17:   required from 'void crow::websocket::Connection<Adaptor>::send_pong(const string&) [with Adaptor = crow::SocketAdaptor; std::__cxx11::string = std::__cxx11::basic_string<char>]'
+crow_all.h:4249:34:   required from 'void crow::websocket::Connection<Adaptor>::handle_fragment() [with Adaptor = crow::SocketAdaptor]'
+crow_all.h:4144:54:   required from 'crow::websocket::Connection<Adaptor>::do_read()::<lambda(const boost::system::error_code&, std::size_t)> [with Adaptor = crow::SocketAdaptor; std::size_t = unsigned int]'
+crow_all.h:4135:28:   required from 'struct crow::websocket::Connection<Adaptor>::do_read() [with Adaptor = crow::SocketAdaptor]::<lambda(const class boost::system::error_code&, std::size_t)>'
+crow_all.h:4133:25:   required from 'void crow::websocket::Connection<Adaptor>::do_read() [with Adaptor = crow::SocketAdaptor]'
+crow_all.h:3938:24:   required from 'void crow::websocket::Connection<Adaptor>::start(std::__cxx11::string&&) [with Adaptor = crow::SocketAdaptor; std::__cxx11::string = std::__cxx11::basic_string<char>]'
+crow_all.h:3803:22:   required from 'crow::websocket::Connection<Adaptor>::Connection(const crow::request&, Adaptor&&, std::function<void(crow::websocket::connection&)>, std::function<void(crow::websocket::connection&, const std::__cxx11::basic_string<char>&, bool)>, std::function<void(crow::websocket::connection&, const std::__cxx11::basic_string<char>&)>, std::function<void(crow::websocket::connection&)>, std::function<bool(const crow::request&)>) [with Adaptor = crow::SocketAdaptor]'
+crow_all.h:9661:165:   required from here
+crow_all.h:3810:26: error: 'struct crow::SocketAdaptor' has no member named 'get_io_service'
+crow_all.h: In instantiation of 'void crow::websocket::Connection<Adaptor>::dispatch(CompletionHandler) [with CompletionHandler = crow::websocket::Connection<Adaptor>::send_binary(const string&) [with Adaptor = crow::SocketAdaptor; std::__cxx11::string = std::__cxx11::basic_string<char>]::<lambda()>; Adaptor = crow::SocketAdaptor]':
+crow_all.h:3851:17:   required from 'void crow::websocket::Connection<Adaptor>::send_binary(const string&) [with Adaptor = crow::SocketAdaptor; std::__cxx11::string = std::__cxx11::basic_string<char>]'
+server.cpp:18:1:   required from here
+crow_all.h:3810:26: error: 'struct crow::SocketAdaptor' has no member named 'get_io_service'
+crow_all.h: In instantiation of 'void crow::websocket::Connection<Adaptor>::dispatch(CompletionHandler) [with CompletionHandler = crow::websocket::Connection<Adaptor>::send_text(const string&) [with Adaptor = crow::SocketAdaptor; std::__cxx11::string = std::__cxx11::basic_string<char>]::<lambda()>; Adaptor = crow::SocketAdaptor]':
+crow_all.h:3862:17:   required from 'void crow::websocket::Connection<Adaptor>::send_text(const string&) [with Adaptor = crow::SocketAdaptor; std::__cxx11::string = std::__cxx11::basic_string<char>]'
+server.cpp:18:1:   required from here
+crow_all.h:3810:26: error: 'struct crow::SocketAdaptor' has no member named 'get_io_service'
+crow_all.h: In instantiation of 'void crow::websocket::Connection<Adaptor>::dispatch(CompletionHandler) [with CompletionHandler = crow::websocket::Connection<Adaptor>::send_ping(const string&) [with Adaptor = crow::SocketAdaptor; std::__cxx11::string = std::__cxx11::basic_string<char>]::<lambda()>; Adaptor = crow::SocketAdaptor]':
+crow_all.h:3826:17:   required from 'void crow::websocket::Connection<Adaptor>::send_ping(const string&) [with Adaptor = crow::SocketAdaptor; std::__cxx11::string = std::__cxx11::basic_string<char>]'
+server.cpp:18:1:   required from here
+crow_all.h:3810:26: error: 'struct crow::SocketAdaptor' has no member named 'get_io_service'
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\memory:79:0,
+                 from C:\Boost\boost_1_87_0/boost/container_hash/hash.hpp:40,
+                 from C:\Boost\boost_1_87_0/boost/functional/hash.hpp:6,
+                 from crow_all.h:228,
+                 from server.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\functional: At global scope:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\functional:1990:2: error: 'std::function<_Res(_ArgTypes ...)>::_Requires<std::function<_Res(_ArgTypes ...)>::_Callable<typename std::decay<_Functor>::type>, std::function<_Res(_ArgTypes ...)>&> std::function<_Res(_ArgTypes ...)>::operator=(_Functor&&) [with _Functor = crow::Server<Handler, Adaptor, Middlewares>::run()::<lambda()> [with Handler = crow::Crow<>; Adaptor = crow::SocketAdaptor; Middlewares = {}]::<lambda()>; _Res = std::__cxx11::basic_string<char>; _ArgTypes = {}; std::function<_Res(_ArgTypes ...)>::_Requires<std::function<_Res(_ArgTypes ...)>::_Callable<typename std::decay<_Functor>::type>, std::function<_Res(_ArgTypes ...)>&> = std::function<std::__cxx11::basic_string<char>()>&]', declared using local type 'crow::Server<Handler, Adaptor, Middlewares>::run()::<lambda()> [with Handler = crow::Crow<>; Adaptor = crow::SocketAdaptor; Middlewares = {}]::<lambda()>', is used but never defined [-fpermissive]
+  operator=(_Functor&& __f)
+  ^~~~~~~~
+In file included from C:\Boost\boost_1_87_0/boost/asio/detail/future.hpp:19:0,
+                 from C:\Boost\boost_1_87_0/boost/asio/packaged_task.hpp:19,
+                 from C:\Boost\boost_1_87_0/boost/asio.hpp:149,
+                 from crow_all.h:1153,
+                 from server.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\future:179:5: error: 'std::future<typename std::result_of<typename std::decay<_Tp>::type(typename std::decay<_BoundArgs>::type ...)>::type> std::async(std::launch, _Fn&&, _Args&& ...) [with _Fn = crow::Server<Handler, Adaptor, Middlewares>::run() [with Handler = crow::Crow<>; Adaptor = crow::SocketAdaptor; Middlewares = {}]::<lambda()>; _Args = {}; typename std::result_of<typename std::decay<_Tp>::type(typename std::decay<_BoundArgs>::type ...)>::type = void]', declared using local type 'crow::Server<Handler, Adaptor, Middlewares>::run() [with Handler = crow::Crow<>; Adaptor = crow::SocketAdaptor; Middlewares = {}]::<lambda()>', is used but never defined [-fpermissive]
+     async(launch __policy, _Fn&& __fn, _Args&&... __args);
+     ^~~~~
+In file included from C:\Boost\boost_1_87_0/boost/asio.hpp:33:0,
+                 from crow_all.h:1153,
+                 from server.cpp:1:
+C:\Boost\boost_1_87_0/boost/asio/basic_deadline_timer.hpp:655:8: error: 'decltype (async_initiate<WaitToken, void(boost::system::error_code)>(declval<boost::asio::basic_deadline_timer<Time, TimeTraits, Executor>::initiate_async_wait>(), token)) boost::asio::basic_deadline_timer<Time, TimeTraits, Executor>::async_wait(WaitToken&&) [with WaitToken = crow::Server<Handler, Adaptor, Middlewares>::run() [with Handler = crow::Crow<>; Adaptor = crow::SocketAdaptor; Middlewares = {}]::<lambda(const boost::system::error_code&)>; Time = boost::posix_time::ptime; TimeTraits = boost::asio::time_traits<boost::posix_time::ptime>; Executor = boost::asio::any_io_executor; decltype (async_initiate<WaitToken, void(boost::system::error_code)>(declval<boost::asio::basic_deadline_timer<Time, TimeTraits, Executor>::initiate_async_wait>(), token)) = void]', declared using local type 'crow::Server<Handler, Adaptor, Middlewares>::run() [with Handler = crow::Crow<>; Adaptor = crow::SocketAdaptor; Middlewares = {}]::<lambda(const boost::system::error_code&)>', is used but never defined [-fpermissive]
+   auto async_wait(
+        ^~~~~~~~~~
+In file included from C:\Boost\boost_1_87_0/boost/asio.hpp:41:0,
+                 from crow_all.h:1153,
+                 from server.cpp:1:
+C:\Boost\boost_1_87_0/boost/asio/basic_signal_set.hpp:595:8: error: 'decltype (async_initiate<SignalToken, void(boost::system::error_code, int)>(declval<boost::asio::basic_signal_set<Executor>::initiate_async_wait>(), token)) boost::asio::basic_signal_set<Executor>::async_wait(SignalToken&&) [with SignalToken = crow::Server<Handler, Adaptor, Middlewares>::run() [with Handler = crow::Crow<>; Adaptor = crow::SocketAdaptor; Middlewares = {}]::<lambda(const boost::system::error_code&, int)>; Executor = boost::asio::any_io_executor; decltype (async_initiate<SignalToken, void(boost::system::error_code, int)>(declval<boost::asio::basic_signal_set<Executor>::initiate_async_wait>(), token)) = void]', declared using local type 'crow::Server<Handler, Adaptor, Middlewares>::run() [with Handler = crow::Crow<>; Adaptor = crow::SocketAdaptor; Middlewares = {}]::<lambda(const boost::system::error_code&, int)>', is used but never defined [-fpermissive]
+   auto async_wait(
+        ^~~~~~~~~~
+
+C:\Users\surface\Documents\GitHub\Concepts-of-CPP\MyCrowServer>
