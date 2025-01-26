@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2021 Andrea Pappacoda
+#
+# SPDX-License-Identifier: Apache-2.0
+
+option('PISTACHE_BUILD_TESTS', type: 'boolean', value: false, description: 'build tests alongside the project')
+option('PISTACHE_BUILD_EXAMPLES', type: 'boolean', value: false, description: 'build examples alongside the project')
+option('PISTACHE_BUILD_DOCS', type: 'boolean', value: false, description: 'build docs alongside the project')
+option('PISTACHE_INSTALL', type: 'boolean', value: true, description: 'add pistache as install target (recommended)')
+option('PISTACHE_USE_SSL', type: 'boolean', value: false, description: 'add support for SSL server')
+option('PISTACHE_USE_RAPIDJSON', type: 'boolean', value: true, description: 'add support for rapidjson')
+option('PISTACHE_USE_CONTENT_ENCODING_BROTLI', type: 'boolean', value: false, description: 'add support for Brotli compressed content encoding')
+option('PISTACHE_USE_CONTENT_ENCODING_ZSTD', type: 'boolean', value: false, description: 'add support for Zstandard compressed content encoding')
+option('PISTACHE_USE_CONTENT_ENCODING_DEFLATE', type: 'boolean', value: false, description: 'add support for deflate compressed content encoding')
+option('PISTACHE_DEBUG', type: 'boolean', value: false, description: 'with debugging code')
+option('PISTACHE_LOG_AND_STDOUT', type: 'boolean', value: false, description: 'send log msgs to stdout too')
+option('PISTACHE_FORCE_LIBEVENT', type: 'boolean', value: false, description: 'force use of libevent')
